@@ -1,0 +1,24 @@
+.class {
+    margin-top: 20px;
+
+  }
+
+.full-widht{
+    width: 100%,
+}
+
+.tarjeta {
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.circular {
+  border-radius: 50%;
+}
+
+.contenedor {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

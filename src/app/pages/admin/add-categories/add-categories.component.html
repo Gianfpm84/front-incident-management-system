@@ -1,0 +1,48 @@
+<mat-card
+  class="text-center"
+  style="margin-left: 20px"
+  style="margin-right: 20px"
+>
+  <h2 class="text-primary">Add New Request.</h2>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-4 offset-md-2">
+          <form (ngSubmit)="addCategories()">
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Title:</mat-label>
+              <input
+                autofocus
+                required
+                type="text"
+                name="titulo"
+                matInput
+                placeholder="Write the title of the request."
+                [(ngModel)]="categories.titulo"
+              />
+            </mat-form-field>
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Description:</mat-label>
+              <textarea
+                name="description"
+                id="description"
+                matInput
+                placeholder="Write the description."
+                rows="15"
+                cols="15"
+                [(ngModel)]="categories.description"
+              >
+              </textarea>
+            </mat-form-field>
+
+            <div class="container text-center mat15">
+              <button mat-raised-button color="primary">Save:</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <br />
+</mat-card>

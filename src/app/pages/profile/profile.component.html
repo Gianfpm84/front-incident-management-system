@@ -1,0 +1,59 @@
+<mat-card class="text-center" style="margin-left: 20px">
+  <h2 class="text-primary">Profile Details:</h2>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="text-center">
+          <img
+            src="../../../assets/profile_admin.png"
+            alt=""
+            class="profile-image"
+          />
+
+          <h1 class="mt20">{{ user.nombre }} {{ user.apellido }}</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <table class="table text-center">
+              <tr>
+                <td>First Name:</td>
+                <td>{{ user.nombre }}</td>
+              </tr>
+              <tr>
+                <td>Last Name:</td>
+                <td>{{ user.apellido }}</td>
+              </tr>
+              <tr>
+                <td>Nickname of user`s:</td>
+                <td>{{ user.username }}</td>
+              </tr>
+              <tr>
+                <td>ID of user`s:</td>
+                <td>{{ user.id }}</td>
+              </tr>
+              <tr>
+                <td>Phone of user`s:</td>
+                <td>{{ user.telefono }}</td>
+              </tr>
+              <tr>
+                <td>Role of user`s:</td>
+                <td>{{ user.authorities[0].authority }}</td>
+              </tr>
+              <tr>
+                <td>State of user`s:</td>
+                <td>{{ user.enabled ? "Active" : "Idle" }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <br />
+      <button style="margin-right: 10px" mat-raised-button color="primary">
+        Update
+      </button>
+      <button mat-raised-button color="accent">&nbsp;Share&nbsp;</button>
+    </div>
+  </mat-card-content>
+</mat-card>

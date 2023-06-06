@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu_books</mat-icon>
+  </a>
+
+  <span>¡RECORD OF INCIDENTS & SOLUTIONS!.</span>
+  <span class="example-spacer"></span>
+
+  <a
+    *ngIf="!login.iniciarSesion()"
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <h6>¡INICIAR SESIÓN!.</h6>
+  </a>
+
+  <a
+    *ngIf="!login.iniciarSesion()"
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml70"
+    aria-label="Example icon-button with heart icon"
+  >
+    <h6>¡REGISTRAR!.</h6>
+  </a>
+
+  <a
+    *ngIf="login.iniciarSesion()"
+    (click)="cerrarSesion()"
+    style="margin-right: 10px"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml70"
+    aria-label="Example icon-button with heart icon"
+  >
+    <h5>¡SALIR!.</h5>
+  </a>
+
+  <button
+    *ngIf="login.iniciarSesion()"
+    mat-button
+    style="margin-right: 15px; margin-top: 5px"
+    class="example-icon favorite-icon mr20"
+    routerLink="/admin/profile"
+    aria-label="Example icon-button with heart icon"
+  >
+    <h5>{{ usuario }}</h5>
+  </button>
+</mat-toolbar>

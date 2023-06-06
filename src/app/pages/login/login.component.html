@@ -1,0 +1,60 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3 class">
+        <mat-card class="tarjeta">
+          <div class="container text-center class class">
+            <img src="../../../assets/login.png" width="150" height="150" />
+          </div>
+
+          <h1 class="text-center">¡INICIO DE SESIÓN!.</h1>
+
+          <form (ngSubmit)="formSubmit()">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre usuario:</mat-label>
+              <input
+                [(ngModel)]="loginData.username"
+                name="username"
+                required
+                matInput
+                placeholder="¡Escriba su nick!."
+              />
+              <mat-hint>El nombre de usuario debe de ser válido.</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Clave de usuario:</mat-label>
+              <input
+                [(ngModel)]="loginData.password"
+                name="password"
+                required
+                type="password"
+                matInput
+                placeholder="¡Escriba su contraseña!."
+              />
+              <mat-hint>La contraseña de usuario debe de ser válida.</mat-hint>
+            </mat-form-field>
+
+            <br />
+            <br />
+
+            <div class="container text-center">
+              <button mat-raised-button color="primary">
+                [INICIAR SESION:]
+              </button>
+              &nbsp;
+              <button
+                type="reset"
+                style="margin-left: 20px"
+                mat-raised-button
+                color="accent"
+              >
+                [¡LIMPIAR!.]
+              </button>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

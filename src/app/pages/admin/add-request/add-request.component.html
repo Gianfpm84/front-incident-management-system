@@ -1,0 +1,84 @@
+<mat-card style="text-align: center">
+  <h2>
+    <p>
+      <b><i>Add New Request.</i></b>
+    </p>
+  </h2>
+
+  <div class="row">
+    <div class="col-md-8 offset-md-2"></div>
+    <form>
+      <mat-form-field class="w100" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter the Title."
+          required
+          matInput
+        />
+      </mat-form-field>
+
+      <mat-form-field class="w100" appearance="fill">
+        <mat-label>Description:</mat-label>
+        <textarea
+          type="text"
+          name="description"
+          placeholder="Enter the Description."
+          rows="8"
+          required
+          matInput
+        >
+        </textarea>
+      </mat-form-field>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-16">
+          <mat-form-field class="w100" appearance="fill">
+            <mat-label>Range of maximum points criticality</mat-label>
+            <input
+              type="number"
+              name="puntosMaximo"
+              placeholder="Enter the Range of maximum points criticality."
+              required
+              matInput
+            />
+            <mat-label> And </mat-label>
+            <mat-label>Range of question attributable.</mat-label>
+            <input
+              type="number"
+              name="numeroDeRequest"
+              placeholder="Enter the Rang of attributable:"
+              required
+              matInput
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+          <label for="">Nro. remito</label>
+          <div class="input-group">
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value="date"
+              min="2023-01-01"
+              max="2033-01-01"
+            />
+            <input
+              type="time"
+              id="start"
+              name="trip-start"
+              value
+              min="2023-01-01"
+              max="2033-01-01"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card>

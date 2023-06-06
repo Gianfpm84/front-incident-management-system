@@ -1,0 +1,28 @@
+<mat-card class="mt10" *ngFor="let e of request">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ e.titulo }} </mat-card-title>
+    <mat-card-subtitle> {{ e.category.titulo }} </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" class="ml20">Questions:</button>
+      <button mat-stroked-button color="primary" class="ml20">
+        Max Points: {{ e.puntosMaximo }}
+      </button>
+      <button mat-stroked-button color="primary" class="ml20">
+        Number Questions: {{ e.numeroDeRequest }}
+      </button>
+      <button mat-flat-button color="primary" class="ml20">Update All:</button>
+      <button mat-flat-button color="primary" class="ml20">Attempts:</button>
+      <br />
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+
+<div class="container text-center mt20">
+  <br />
+  <button routerLink="/admin/add-request" mat-raised-button color="primary">
+    Add Questionnaires
+  </button>
+</div>
